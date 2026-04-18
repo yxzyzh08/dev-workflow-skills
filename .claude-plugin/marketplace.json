@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "dev-workflow-skills",
+  "version": "1.0.0",
+  "description": "Development workflow skills: requirements analysis, architecture design, implementation, testing, delivery QA, and more",
+  "owner": {
+    "name": "cgs"
+  },
+  "plugins": [
+    {
+      "name": "dev-workflow-skills",
+      "source": "./",
+      "description": "Development workflow skills: requirements analysis, architecture design, implementation, testing, delivery QA, and more",
+      "version": "1.0.0",
+      "author": {
+        "name": "cgs"
+      },
+      "keywords": ["workflow", "development", "skills"],
+      "category": "development"
+    }
+  ]
+}
