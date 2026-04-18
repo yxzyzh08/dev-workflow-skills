@@ -47,7 +47,7 @@ Do not use this skill to execute the workflow stage itself. Use the owning stage
 ## Outputs
 
 - `skills/{skill-name}/SKILL.md`
-- skill validation or review reports under `docs/superpowers/specs/reviews/`
+- skill validation or review reports under `docs/dev-workflow-skills/reviews/`
 - synchronized updates to progress artifacts (dashboard + history per `workflow-protocol`) once validation passes
 
 ## Working Loop
@@ -86,7 +86,7 @@ Do not use this skill to execute the workflow stage itself. Use the owning stage
 - For this repository, behavior validation should include Chinese smoke prompts whenever the skill is likely to be triggered by Chinese task wording.
 - Decoupling validation must confirm `workflow-project.yaml` structure, and a hardcoded-path scan must pass before declaring skill work complete. Use a scoped scan for the revised skill paths during incremental decoupling tasks, then run the no-argument full-library scan during final regression.
 - `scripts/run-skill-library-regression.sh` is the preferred final-regression entrypoint because it chains structure, language policy, project-config, hardcoded-path, and optional discovery validation in one command.
-- Validation results belong in a written review report under `docs/superpowers/specs/reviews/`; completion is not claimed only in chat.
+- Validation results belong in a written review report under `docs/dev-workflow-skills/reviews/`; completion is not claimed only in chat.
 
 ## Completion Checklist
 
@@ -99,5 +99,5 @@ Do not use this skill to execute the workflow stage itself. Use the owning stage
 - `scripts/check-language-policy.sh` passes on the revised scope whenever `SKILL.md`, `references/`, or `templates/` changed.
 - Fresh-session discovery validation confirms the skill is present in `Available skills`.
 - Chinese smoke prompts were reviewed when the skill is expected to serve default Chinese collaboration.
-- A written validation report exists under `docs/superpowers/specs/reviews/`.
+- A written validation report exists under `docs/dev-workflow-skills/reviews/`.
 - Progress artifacts reflect the validated state of the skill per `workflow-protocol` (dashboard + history).

@@ -73,7 +73,7 @@ Do not use this skill for requirement gathering, acceptance design, detailed des
 
 - Use `references/output-artifacts.md` as the minimum artifact contract and `references/review-focus.md` as the default review lens.
 - Human alignment is a mandatory gate before the architecture baseline is treated as stable after creation or revision.
-- If the same architecture review / revise loop exceeds 3 rounds without convergence, stop and escalate to the human per `workflow-protocol`.
+- If the same architecture review / revise loop reaches 7 unresolved rounds without convergence, stop and escalate to the human per `workflow-protocol`.
 - Architecture updates triggered by review findings or Delivery QA evidence must include impact analysis and a fix-task list.
 - If the change exceeds a small adjustment, route it through `<from paths.changes_dir>/cr-{nn}.md` before treating the revised architecture as valid.
 

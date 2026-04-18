@@ -72,7 +72,7 @@ Do not use this skill to modify production code, rewrite architecture or design,
 ## Review Gate Rules
 
 - Step 20 and Step 23 are separate review gates and always produce different review files.
-- If the same failure-analysis or fix-plan loop exceeds 3 rounds without convergence, stop and escalate to the human per `workflow-protocol`.
+- If the same failure-analysis or fix-plan loop reaches 7 unresolved rounds without convergence, stop and escalate to the human per `workflow-protocol`.
 - Delivery QA may review and route, but it does not modify production code, architecture, design, or E2E assets directly.
 - `final-delivery.md` summarizes the delivery outcome across runs; per-run `run-{date}.md` files remain the detailed records.
 

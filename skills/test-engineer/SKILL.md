@@ -66,7 +66,7 @@ Do not use this skill for writing production code, reading implementation intern
 
 - Use `references/output-artifacts.md` to judge completeness and `references/coverage-and-setup.md` to judge coverage and automation sufficiency.
 - Review findings must flow back into the plan, setup assets, or suite before the next review round.
-- If the same E2E review / revise loop exceeds 3 rounds without convergence, stop and escalate to the human per `workflow-protocol`.
+- If the same E2E review / revise loop reaches 7 unresolved rounds without convergence, stop and escalate to the human per `workflow-protocol`.
 - If the review exposes an upstream ambiguity in acceptance or detailed design, stop and route it upstream instead of guessing the behavior.
 
 ## Completion Checklist

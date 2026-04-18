@@ -76,7 +76,7 @@ Do not use this skill for writing code, classifying delivery failures, or author
 
 - Use `references/output-artifacts.md` to judge completeness and `references/traceability-rules.md` to judge internal consistency.
 - Human confirmation is a mandatory gate before plan or detail is treated as stable for downstream work.
-- If the same design artifact loop exceeds 3 rounds without convergence, stop and escalate to the human per `workflow-protocol`.
+- If the same design artifact loop reaches 7 unresolved rounds without convergence, stop and escalate to the human per `workflow-protocol`.
 - Review cycles end only after findings are written down and the human confirms the revised understanding.
 - Design changes triggered by review or Delivery QA evidence must include impact analysis and concrete repair tasks.
 
@@ -86,6 +86,7 @@ Do not use this skill for writing code, classifying delivery failures, or author
 - `<from paths.releases_dir>/r{n}/design/plan.md` declares implemented requirement / acceptance IDs, records tasks, dependencies, parallelization notes, and output mappings. Each task's steps reference `detail.md` for contract definitions instead of duplicating them.
 - `<from paths.releases_dir>/r{n}/design/reviews/design-review-{nn}.md` records the review loops.
 - Required impact analysis + fix-task lists exist when design changes were forced mid-stream.
-- Progress artifacts reflect the latest release design status per `workflow-protocol` (dashboard + history).
+- `<from paths.progress>` (dashboard) updated with current stage status, blocker list, and next step.
+- `<from paths.progress_history>` (history) appended with timestamped entry describing what changed.
 - Every task has step-level decomposition with code/commands and expected output (inline in plan.md or in `tasks/T{n}.md`); no step contains unresolved or deferred content.
 - Multi-task plans with shared interfaces or data flow include an integration task as the last task. Multi-task plans with fully independent tasks (no shared interfaces or data flow) may omit it only if plan.md states the exemption reason. Single-task plans do not need an integration task.

@@ -59,7 +59,7 @@ Do not use this skill to skip straight to implementation or to fabricate a class
 
 - Do not propose or implement fixes before the evidence supports the diagnosis.
 - Prefer one hypothesis at a time over shotgun experimentation.
-- If the same bug-analysis or diagnosis loop exceeds 3 rounds without convergence, stop and escalate to the human per `workflow-protocol`.
+- If the same bug-analysis or diagnosis loop reaches 7 unresolved rounds without convergence, stop and escalate to the human per `workflow-protocol`.
 - If the evidence points to architecture, design, or product ambiguity, route or escalate instead of forcing a code-level answer.
 - If evidence remains insufficient after another pass, stop and escalate rather than guessing.
 

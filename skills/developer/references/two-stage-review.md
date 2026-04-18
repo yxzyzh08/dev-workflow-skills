@@ -27,7 +27,7 @@ Write `<from paths.releases_dir>/r{n}/design/reviews/spec-review-{nn}.md` with:
 
 ### Gate rule
 
-Do not proceed to stage 2 until stage 1 verdict is pass. If findings are blocker-level, repair and re-run stage 1. Maximum 3 repair rounds before escalation per workflow-protocol loop stop rules.
+Do not proceed to stage 2 until stage 1 verdict is pass. If findings are blocker-level, repair and re-run stage 1. Maximum 7 repair rounds before escalation per workflow-protocol loop stop rules.
 
 ## Stage 2: Code Quality Review
 
@@ -54,7 +54,7 @@ Write `<from paths.releases_dir>/r{n}/design/reviews/code-review-{nn}.md` with:
 
 ### Gate rule
 
-If findings are blocker-level, repair and re-run stage 2. Maximum 3 repair rounds before escalation per workflow-protocol loop stop rules.
+If findings are blocker-level, repair and re-run stage 2. Maximum 7 repair rounds before escalation per workflow-protocol loop stop rules.
 
 ## Reviewer separation
 

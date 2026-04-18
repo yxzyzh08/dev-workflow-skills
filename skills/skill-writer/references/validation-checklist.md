@@ -36,7 +36,7 @@ Use this checklist after creating or revising a workflow skill.
 - at least one pressure-test prompt reviewed
 - obvious overlap with neighboring skills checked
 - Chinese trigger wording or equivalent keyword coverage was reviewed where the skill is likely to be triggered in Chinese
-- validation report written to `docs/superpowers/specs/reviews/`
+- validation report written to `docs/dev-workflow-skills/reviews/`
 
 ## Decoupling
 

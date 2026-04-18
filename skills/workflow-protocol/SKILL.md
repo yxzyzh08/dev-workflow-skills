@@ -44,6 +44,15 @@ This file keeps only the binding shared rules. Repeated checklists, field schema
 - When a reviewed artifact exposes an `author`, the `reviewer` should be different unless the human explicitly waives that separation.
 - Do not skip the human gates for requirement alignment, acceptance alignment, major change approval, or final delivery approval.
 
+## Progress Update Hook (mandatory, all skills)
+
+Every skill must execute this hook **after completing any round of work that changes workflow state** (creating/modifying artifacts, producing reviews, fixing review findings, confirming gates). This is not optional and must not be deferred to "later".
+
+1. Update `<from paths.progress>` (dashboard): refresh stage status table, blocker list, and next step to reflect current reality.
+2. Append to `<from paths.progress_history>` (history): add a timestamped one-line entry (`- HH:mm actor: what changed`) under today's date heading.
+
+Both files must be updated in the same round — updating one without the other is incomplete. If you are unsure whether your work constitutes a state change, update anyway; a redundant progress entry costs less than a missing one.
+
 ## Document and Metadata Rules
 
 - Content documents use frontmatter fields such as `title`, `type`, `created`, `status`, `last_modified`, `author`, `upstream`, `downstream`, and `change_history`.
@@ -91,8 +100,8 @@ This file keeps only the binding shared rules. Repeated checklists, field schema
 
 ## Loop Stop Rules
 
-- Any formal review, revise, recheck, or repair loop on the same artifact or fix direction may run at most 3 consecutive rounds without convergence.
-- After 3 unresolved rounds, stop and escalate to the human to decide whether to continue, split scope, reopen an upstream stage, or pause the route.
+- Any formal review, revise, recheck, or repair loop on the same artifact or fix direction may run at most 7 consecutive rounds without convergence.
+- After 7 unresolved rounds, stop and escalate to the human to decide whether to continue, split scope, reopen an upstream stage, or pause the route.
 - Escalate earlier when reviewers conflict on root cause or fix direction, authoritative sources conflict, the repair cost exceeds the current release expectation, or the correct return path is unclear.
 
 ## Progress Update Rules
@@ -116,7 +125,7 @@ Stop and escalate to the human when any of the following is true:
 - a pending CR blocks the requested path
 - a frozen document is about to change without an approved CR
 - a required human gate has not happened yet
-- the same formal artifact, review, or repair loop has failed to converge after 3 rounds
+- the same formal artifact, review, or repair loop has failed to converge after 7 rounds
 - evidence is insufficient to classify a failure and the workflow requires escalation
 - the requested action conflicts with the current frozen baseline and no approved reopening path exists
 

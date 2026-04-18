@@ -71,7 +71,7 @@ Do not start coding until the design contract and test scaffolding are clear eno
 
 - Code review checks design conformance, test evidence, and scope discipline; use `references/traceability-and-review.md` as the default review lens.
 - Delivery QA bug fixes rely on the provided bug analysis. Do not re-classify the failure or guess at upstream intent.
-- If the same code-review, repair, or rework loop exceeds 3 rounds without convergence, stop and escalate to the human per `workflow-protocol`.
+- If the same code-review, repair, or rework loop reaches 7 unresolved rounds without convergence, stop and escalate to the human per `workflow-protocol`.
 - If the reported issue actually exposes a design or architecture gap, route it back upstream instead of patching around the contract.
 - Two-stage review is mandatory for each task: spec compliance (stage 1) must pass before code quality review (stage 2) begins. See `references/two-stage-review.md`.
 

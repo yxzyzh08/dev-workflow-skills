@@ -77,7 +77,7 @@ Do not use this skill for acceptance design, architecture design, detailed desig
 
 - Review reports must follow the shared review format from `workflow-protocol`.
 - Review-driven edits do not go straight back to review; they must pass through human confirmation first.
-- If the same requirement artifact or review / revise loop exceeds 3 rounds without convergence, stop and escalate to the human per `workflow-protocol`.
+- If the same requirement artifact or review / revise loop reaches 7 unresolved rounds without convergence, stop and escalate to the human per `workflow-protocol`.
 - If the human says the understanding is still misaligned, continue clarification instead of freezing.
 - Requirement review focuses on scope clarity, numbering stability, freeze boundaries, traceability, and whether cross-cutting concerns are separated correctly.
 
