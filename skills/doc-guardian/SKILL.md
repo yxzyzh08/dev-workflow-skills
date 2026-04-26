@@ -1,6 +1,6 @@
 ---
 name: doc-guardian
-description: Use when documents, frozen baselines, frontmatter, or CR state need compliance checks before downstream work continues
+description: Use when documents, frozen baselines, frontmatter, or CR state need compliance checks before downstream work continues, including 文档合规检查/基线校验/元数据审查
 ---
 
 # Doc Guardian

@@ -1,6 +1,6 @@
 ---
 name: workflow-protocol
-description: Use when working inside workflow skills and the task must follow shared document, review, freeze, and Change Request rules
+description: Use when working inside workflow skills and the task must follow shared document, review, freeze, and Change Request rules, including 冻结规则/评审规则/CR流程
 ---
 
 # Workflow Protocol

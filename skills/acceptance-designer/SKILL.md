@@ -1,6 +1,6 @@
 ---
 name: acceptance-designer
-description: Use when turning frozen requirements into human E2E acceptance documents and acceptance review cycles
+description: Use when turning frozen requirements into human E2E acceptance documents and acceptance review cycles, including 验收设计/验收文档编写/验收评审
 ---
 
 # Acceptance Designer

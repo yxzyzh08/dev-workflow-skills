@@ -1,0 +1,32 @@
+{
+  "name": "dev-workflow-skills",
+  "version": "1.0.0",
+  "description": "Development workflow skill pack for requirements, architecture, implementation, testing, delivery QA, and workflow governance.",
+  "author": {
+    "name": "cgs"
+  },
+  "keywords": [
+    "workflow",
+    "development",
+    "skills",
+    "codex"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Dev Workflow Skills",
+    "shortDescription": "Stage-based workflow skills for software delivery.",
+    "longDescription": "A Codex plugin that packages reusable workflow skills for requirements, architecture, implementation, testing, delivery QA, and workflow governance.",
+    "developerName": "cgs",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Route this repo to the correct workflow skill for the current stage.",
+      "Use the developer workflow skill to continue the current release task.",
+      "Audit progress, reviews, and handoff state before the next stage."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

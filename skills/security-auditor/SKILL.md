@@ -1,6 +1,6 @@
 ---
 name: security-auditor
-description: Use when code changes, architecture decisions, or dependency updates need a scoped security review before the workflow can proceed
+description: Use when code changes, architecture decisions, or dependency updates need a scoped security review before the workflow can proceed, including 安全评审/依赖安全检查/架构安全审计
 ---
 
 # Security Auditor

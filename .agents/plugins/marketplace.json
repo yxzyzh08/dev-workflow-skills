@@ -1,0 +1,20 @@
+{
+  "name": "cgs-local-plugins",
+  "interface": {
+    "displayName": "CGS Local Plugins"
+  },
+  "plugins": [
+    {
+      "name": "dev-workflow-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/dev-workflow-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

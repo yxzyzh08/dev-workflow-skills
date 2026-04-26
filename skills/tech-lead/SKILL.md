@@ -1,6 +1,6 @@
 ---
 name: tech-lead
-description: Use when architecture, requirements, and acceptance baselines must be turned into release design, development plan, and detailed design
+description: Use when architecture, requirements, and acceptance baselines must be turned into release design, development plan, and detailed design, including 方案设计/详细设计/开发计划拆解
 ---
 
 # Tech Lead

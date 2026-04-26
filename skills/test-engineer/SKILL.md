@@ -1,6 +1,6 @@
 ---
 name: test-engineer
-description: Use when frozen acceptance and detailed design must be turned into black-box E2E plans, automated setup, and E2E review artifacts
+description: Use when frozen acceptance and detailed design must be turned into black-box E2E plans, automated setup, and E2E review artifacts, including 测试设计/E2E测试/黑盒测试
 ---
 
 # Test Engineer

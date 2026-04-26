@@ -1,6 +1,6 @@
 ---
 name: parallel-dispatcher
-description: Use when developer work for the current release can split into independent plan tasks that should run in parallel under strict dependency and contract controls
+description: Use when developer work for the current release can split into independent plan tasks that should run in parallel under strict dependency and contract controls, including 并行任务拆分/并行开发分派/并行执行协调
 ---
 
 # Parallel Dispatcher

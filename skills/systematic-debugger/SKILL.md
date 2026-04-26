@@ -1,6 +1,6 @@
 ---
 name: systematic-debugger
-description: Use when encountering bugs, test failures, or anomalous behavior that demands evidence-first root-cause diagnosis before proposing a fix
+description: Use when encountering bugs, test failures, or anomalous behavior that demands evidence-first root-cause diagnosis before proposing a fix, including 问题排查/根因定位/异常分析
 ---
 
 # Systematic Debugger

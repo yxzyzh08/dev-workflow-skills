@@ -1,6 +1,6 @@
 ---
 name: skill-writer
-description: Use when creating a new workflow skill, revising an existing skill, or validating whether a skill can be discovered and followed correctly
+description: Use when creating a new workflow skill, revising an existing skill, or validating whether a skill can be discovered and followed correctly, including skill编写/skill修改/skill校验
 ---
 
 # Skill Writer

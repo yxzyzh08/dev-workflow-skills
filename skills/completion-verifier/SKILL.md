@@ -1,6 +1,6 @@
 ---
 name: completion-verifier
-description: Use when a workflow stage is about to be marked complete and outputs, document state, or command-backed evidence must be checked first
+description: Use when a workflow stage is about to be marked complete and outputs, document state, or command-backed evidence must be checked first, including 完成前核对/交付证据校验/阶段完成验收
 ---
 
 # Completion Verifier

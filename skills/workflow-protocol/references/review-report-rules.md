@@ -81,3 +81,10 @@ release: r1
 - Code review reports must name the reviewed files, directories, or modules explicitly.
 - Review conclusions stay in the body; they are not stored as a separate frontmatter status field.
 - Findings use only `blocker` and `minor`; no extra severity scale should be invented ad hoc.
+
+## Review Persistence
+
+- Every review or re-review round must be saved as a new document.
+- Never overwrite or append into a prior review document when the human asks for a fresh review round.
+- Save review artifacts in the repository's configured review location; when the repo does not define a more specific location, use its general review/docs area.
+- When a target already has prior review rounds, create a new filename for the new round so review history remains traceable.

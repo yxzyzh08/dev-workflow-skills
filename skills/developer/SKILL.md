@@ -1,6 +1,6 @@
 ---
 name: developer
-description: Use when detailed design and implementation tasks are ready for code changes, test-first delivery, code review response, or code-level bug fixes
+description: Use when detailed design and implementation tasks are ready for code changes, test-first delivery, code review response, or code-level bug fixes, including 开发实现/代码修改/修Bug/修复测试/代码评审反馈处理
 ---
 
 # Developer

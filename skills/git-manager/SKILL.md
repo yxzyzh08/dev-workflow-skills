@@ -1,6 +1,6 @@
 ---
 name: git-manager
-description: Use when isolated worktrees, workflow branch naming, or serial integration control are needed for implementation work
+description: Use when isolated worktrees, workflow branch naming, or serial integration control are needed for implementation work, including worktree管理/分支管理/串行集成
 ---
 
 # Git Manager
