@@ -1,0 +1,9 @@
+# npm runtime cache (never distribute)
+.npm/
+
+# macOS
+.DS_Store
+
+# Local convenience launchers (workstation-only, not part of skill contract)
+startclaude.sh
+startcode.sh
