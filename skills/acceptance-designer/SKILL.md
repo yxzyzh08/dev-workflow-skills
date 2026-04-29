@@ -1,13 +1,13 @@
 ---
 name: acceptance-designer
-description: Use when turning frozen requirements into human E2E acceptance documents and acceptance review cycles, including 验收设计/验收文档编写/验收评审
+description: Use when designing acceptance documents from frozen requirements (for runtime products or static artifacts like skills/docs/articles) and running acceptance review cycles, including 验收设计/验收文档/验收评审/skill项目验收/产物型项目验收
 ---
 
 # Acceptance Designer
 
 ## Overview
 
-This skill owns workflow Steps 4-6: turning frozen requirements into the human E2E acceptance baseline. It defines what must be formally accepted before the project can move downstream into implementation and delivery.
+This skill owns workflow Steps 4-6: turning frozen requirements into the formal acceptance baseline. It defines what must be formally accepted before the project can move downstream into implementation and delivery. The acceptance surface may be runtime (Variants A/B) or fixture-based for static artifacts (Variant C; see `references/variant-c-skill-projects.md`).
 
 Acceptance cases produced under this skill are structured for **mechanical verification**: every step pairs an action with tool-checkable expected observations, every case declares an outcome rule with deterministic priority, and every case classifies whether it can be run by AI autonomously, by a human observer, or by both.
 
@@ -29,7 +29,7 @@ Read `skills/workflow-protocol/SKILL.md`, then read repository-root `workflow-pr
 Use this skill when the human wants to:
 
 - write or revise the configured acceptance baseline from `paths.acceptance`
-- design the human E2E acceptance surface from frozen requirements
+- design the formal acceptance surface from frozen requirements (runtime or artifact-based; see State Catalog variants)
 - review acceptance quality or output an acceptance review report
 - respond to acceptance review findings
 - reopen acceptance work after an approved CR

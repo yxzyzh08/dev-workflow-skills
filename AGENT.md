@@ -9,7 +9,7 @@ A multi-platform skill pack for stage-based software delivery. A single `skills/
 | `workflow-router` | Session start or next-step is unclear |
 | `workflow-protocol` | Shared freeze / CR / review rules — read by all other skills |
 | `requirements-analyst` | Collect, structure, review, and freeze requirements |
-| `acceptance-designer` | Turn frozen requirements into E2E acceptance documents |
+| `acceptance-designer` | Turn frozen requirements into formal acceptance documents (runtime or artifact-based) |
 | `system-architect` | Architecture design and review from frozen baselines |
 | `tech-lead` | Release design, development plan, and detailed design |
 | `developer` | Implementation, TDD, and code-review response |
