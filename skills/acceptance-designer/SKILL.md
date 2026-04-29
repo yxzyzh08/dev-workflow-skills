@@ -18,6 +18,7 @@ Use these assets for the full grammar and repeatable checks:
 - `references/output-artifacts.md` — full authoring grammar: observation vocabulary, Flow primitives, Condition sub-grammar, Pass-checklist scopes, outcome templates, State Catalog variants, case skeletons, required-field lists.
 - `references/boundary-examples.md` — decisions for edge cases and scope boundaries versus other skills.
 - `references/illustrative-examples.md` — non-normative worked examples on a hypothetical toy product, illustrating each case tier.
+- `references/variant-c-skill-projects.md` — Variant C (fixture-based / artifact-only) authoring rules: when to use, State Catalog template, AI-tier observation patterns for static artifacts, Pass checklist examples, LLM non-determinism recipes, dogfood case.
 
 ## First Step
 
@@ -51,10 +52,11 @@ Do not use this skill for requirement clarification, architecture design, detail
 ## Working Loop
 
 1. Read the frozen requirements and identify the formal acceptance surface.
-2. Pick the **State Catalog variant** based on product capability:
-   - Variant A (serial-only, singleton shared state) is the default. Requires a suite-level run-lock.
-   - Variant B (workspace-parameterized) only when the product accepts a per-workspace home/flag.
-3. Write the State Catalog section first, binding project-specific placeholders (service commands, home directory, PID file, state file, etc.) once.
+2. Pick the **State Catalog variant** based on product type and capability:
+   - Variant A (serial-only, singleton shared state) — default for runtime products with shared global state. Requires a suite-level run-lock.
+   - Variant B (workspace-parameterized) — runtime products that accept a per-workspace home/flag.
+   - Variant C (fixture-based / artifact-only) — products whose deliverable is a static artifact (skill, document, article); no runtime process. See `references/variant-c-skill-projects.md`.
+3. Write the State Catalog section first, binding project-specific placeholders once (Variant A/B: service commands, home directory, PID file, state file; Variant C: fixture root, output directory, harness invocation).
 4. Write acceptance preparation work and main-flow cases.
 5. **Classify each case** by `default-actor` and `verifier` (see "Classifying a Case" below).
 6. Fill the matching case skeleton (ai / human / hybrid) per `references/output-artifacts.md`.
@@ -123,7 +125,7 @@ Individual steps may override with `(actor=<value>)`. Gate-typing humans use `ac
 
 ### Shared structural rules (all tiers)
 
-- `## 3. State Catalog` declares the variant (A or B) in its heading. No mixing variants in one document.
+- `## 3. State Catalog` declares the variant (A, B, or C) in its heading. No mixing variants in one document.
 - Observations use only declared tokens from the two tier vocabularies (`references/output-artifacts.md`).
 - Conditions use only the declared Condition sub-grammar.
 - `kind=wait` steps must have `within Ns` on every expected bullet.
@@ -138,6 +140,7 @@ Individual steps may override with `(actor=<value>)`. Gate-typing humans use `ac
 - Default coverage is main flow + formal product commitments only. Non-normal paths appear only when they are product commitments, governance gates, or recovery capabilities.
 - UI flows are described in Markdown — no HTML, no prototypes.
 - Under Variant A: serial execution + run-lock. Every case resets to its Starting state.
+- Under Variant C: invariants use only file-state observation modes; runtime modes (`process-running` / `socket-listening` / `log-line`) are not used. Cleanup defaults to `rm -rf <output-dir>/<case-id>`; fixtures are read-only and never reset. Run-lock is optional. See `references/variant-c-skill-projects.md` for the full template (State Catalog, Acceptance Preparation bindings, Pass checklist recipes).
 
 ## Acceptance Item Structure
 
