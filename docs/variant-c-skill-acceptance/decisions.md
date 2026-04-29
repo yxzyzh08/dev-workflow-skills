@@ -49,3 +49,14 @@
   - `references/variant-c-skill-projects.md` §7 Section Defaults 给详细模板
   两层声明充分。
 - **影响**：design.md 5 项改动 → 实际 4 项实施 + 1 项合并；SKILL.md 案例骨架保持原状（与 Variant A/B 一致风格）。
+
+## D-006 Scoped reversal of D-003 — minimal `workflow-project.yaml` for progress tracking only
+
+- **决策**：在仓库根新增 `workflow-project.yaml`，**仅**绑定 `paths.progress` 和 `paths.progress_history`（指向 `docs/workflow/progress.md` 与 `docs/workflow/progress-history.md`）。`paths.requirements` / `paths.acceptance` / `paths.architecture` 仍然**不**绑定。
+- **日期**：2026-04-29
+- **理由**：D-003 拒绝引入 `workflow-project.yaml` 的核心顾虑是 `paths.acceptance` 的递归悖论（本仓库是 `acceptance-designer` 自身的源头，旧/新两份语义会冲突）。这个顾虑只针对 acceptance / requirements / architecture——`paths.progress` 没有此问题（进度追踪是描述性的，不是验收对象）。本次按 scoped 反转：只引入 progress 相关路径，让 `workflow-protocol` §47 Progress Update Hook 在本仓库可正常工作；保留 D-003 对内容路径的顾虑。
+- **影响**：
+  - 新增 `workflow-project.yaml`（仅 `paths.progress` / `paths.progress_history` + `workflow.use_progress_tracking: true`）
+  - 新增 `docs/workflow/progress.md` + `docs/workflow/progress-history.md`
+  - `AGENT.md` 新增 "Progress & Status" 段
+  - 后续若需扩展（如真要走 in-house 需求 / 验收流程），再单独决议；本次不预设
